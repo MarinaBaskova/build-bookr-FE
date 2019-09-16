@@ -28,10 +28,9 @@ class Register extends React.Component {
 	};
 	render() {
 		return (
-			<div className='Register-Wrapper'>
-				
-				<form  className="Register-Form-Wrapper" action="" onSubmit={this.handleSubmit}>
-				<h1 className='Register-Title'>Register</h1>
+			<div className="Register-Wrapper">
+				<form className="Register-Form-Wrapper" action="" onSubmit={this.handleSubmit}>
+					<h1 className="RegisterTitle">Register</h1>
 					<input
 						type="text"
 						placeholder="username"
