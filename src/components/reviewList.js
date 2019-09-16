@@ -10,6 +10,11 @@ class ReviewList extends React.Component {
 	render() {
 		return (
 			<div>
+				<div className="Review-Button">
+					<Link className="Link" to={`${this.props.match.url}/reviewform`}>
+						Add Review
+					</Link>
+				</div>
 				{this.props.reviewList &&
 					this.props.reviewList.map((review) => {
 						return (
@@ -23,12 +28,7 @@ class ReviewList extends React.Component {
 							/>
 						);
 					})}
-					<div className='Review-Button'>
-					<Link className="Link" to={`${this.props.match.url}/reviewform`}>
-					Add Review
-				</Link>
-					</div>
-				
+
 				<div />
 			</div>
 		);

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export default function footer() {
-  return (
-    <div>
-      <p>copyright bookr 2019</p>
-    </div>
-  )
+	return (
+		<div className="Footer">
+			<p>copyright bookr 2019</p>
+		</div>
+	);
 }
