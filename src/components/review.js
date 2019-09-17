@@ -5,6 +5,14 @@ const Review = (props) => {
 	return (
 		<div className="Review">
 			{/* <h3 className="Review-Title">Review:</h3> */}
+			<div />
+			<StarRatingComponent
+				className="Star-Rating"
+				name="Rating"
+				starCount={5}
+				editing={false}
+				value={props.rating}
+			/>
 			<div className="ReviewTop">
 				<div className="UserName">
 					<h4>{props.username}</h4>
@@ -16,13 +24,6 @@ const Review = (props) => {
 
 			<div className="Review-Text">
 				<p>{props.review.review}</p>
-				<StarRatingComponent
-					className="Star-Rating"
-					name="Rating"
-					starCount={5}
-					editing={false}
-					value={props.rating}
-				/>
 			</div>
 		</div>
 	);
