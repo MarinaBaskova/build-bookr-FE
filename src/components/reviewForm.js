@@ -36,16 +36,8 @@ class ReviewForm extends Component {
 	render() {
 		return (
 			<div className="Review-Form-Wrapper">
-				<form onSubmit={this.submitNewReview}>
-					<input className="Review-Field"
-						onChange={this.handleInputChange}
-						placeholder="review"
-						type="text"
-						value={this.state.review}
-						name="review"
-						required
-					/>
-
+				<h3 className="Review-Form">Review Form</h3>
+				<div className="ReviewRaiting">
 					<StarRatingComponent
 						onStarClick={this.onStarClick.bind(this)}
 						className="Star-Rating"
@@ -53,7 +45,20 @@ class ReviewForm extends Component {
 						starCount={5}
 						value={this.state.rating}
 					/>
-					<button>Add Review</button>
+				</div>
+				<form onSubmit={this.submitNewReview}>
+					<input
+						className="Review-Field"
+						onChange={this.handleInputChange}
+						placeholder="type your review here"
+						type="text"
+						value={this.state.review}
+						name="review"
+						required
+					/>
+					<div className="AddReviewBtn">
+						<button>Add Review</button>
+					</div>
 				</form>
 			</div>
 		);

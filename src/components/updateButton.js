@@ -68,7 +68,7 @@ class updateButton extends React.Component {
 	render() {
 		return (
 			<div>
-				<Button className='Modal-Btn' variant="outlined" color="primary" onClick={this.handleClickOpen}>
+				<Button className="Modal-Btn" variant="outlined" color="primary" onClick={this.handleClickOpen}>
 					Update Book
 				</Button>
 				<Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="form-dialog-title">

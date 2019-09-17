@@ -65,6 +65,30 @@ class BookPage extends React.Component {
 		return (
 			//delete book
 			<div className="Book">
+				<div className="TitleRating">
+					<h3 className="BookTitle">{this.props.book.title}</h3>
+					<StarRatingComponent
+						className="Agg-Rating"
+						name="rating"
+						starCount={5}
+						editing={false}
+						value={Number(this.props.book.rating)}
+					/>
+				</div>
+
+				<div className="BookCover">
+					<img className="Cover" src={this.props.book.imageUrl} alt="Book" />
+				</div>
+				<div className="BookInforWrapper">
+					<ul className="BookInfo">
+						<li>Author: {this.props.book.author}</li>
+						<li>Price: $ {this.props.book.price}</li>
+						<li>Publisher:{this.props.book.publisher}</li>
+						<li>Synopsis:{this.props.book.description}</li>
+					</ul>
+				</div>
+
+				{/* average review score */}
 				<div className="UpdateDelete">
 					<div className="DeleteButton">
 						<Button className="Modal-Btn" variant="outlined" color="primary" onClick={this.handleClickOpen}>
@@ -95,34 +119,7 @@ class BookPage extends React.Component {
 
 					<UpdateButton />
 					{/* delete book end */}
-
-					<div />
 				</div>
-				<div className="TitleRating">
-					<h3 className="BookTitle">{this.props.book.title}</h3>
-					<StarRatingComponent
-						className="Agg-Rating"
-						name="rating"
-						starCount={5}
-						editing={false}
-						value={Number(this.props.book.rating)}
-					/>
-				</div>
-
-				<div className="BookCover">
-					<img className="Cover" src={this.props.book.imageUrl} alt="Book" />
-				</div>
-				<div className="BookInforWrapper">
-					<ul className="BookInfo">
-						<li>Author: {this.props.book.author}</li>
-						<li>Price: $ {this.props.book.price}</li>
-						<li>Publisher:{this.props.book.publisher}</li>
-						<li>Synopsis:{this.props.book.description}</li>
-					</ul>
-				</div>
-
-				{/* average review score */}
-
 				<div className="Review-Wrapper">
 					<ReviewList className="Review-Page" match={this.props.match} reviewList={this.props.book.reviews} />
 				</div>
