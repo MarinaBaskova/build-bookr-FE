@@ -29,11 +29,9 @@ class Login extends React.Component {
 	render() {
 		return (
 			<div className="Login-Page">
-				<form 
-				className="login-form"
-			    onSubmit={this.handleLogin}>
-				<div className="spacer"></div>
-				<h1 className='Login-Title'>Login</h1>
+				<form className="login-form" onSubmit={this.handleLogin}>
+					<div className="spacer" />
+					<h1 className="Login-Title">Login</h1>
 					<input
 						type="text"
 						placeholder="username"
@@ -56,7 +54,6 @@ class Login extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-	console.log('MSTP', state);
 	return {
 		loggingIn: state.loggingIn,
 		error: state.error

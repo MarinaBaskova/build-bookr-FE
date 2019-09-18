@@ -3,8 +3,8 @@ import React from 'react';
 const Book = (props) => {
 	return (
 		<div className="Books">
+			<h3 className="BookTitleList">{props.name}</h3>
 			<div className="Book-Top">
-				<h3 className="BookTitleList">{props.name}</h3>
 				<div className="BookImage">
 					<img className="CoverImage" src={props.imageUrl} alt="Book Cover" />
 				</div>

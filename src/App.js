@@ -9,7 +9,6 @@ import BookList from './components/bookList';
 import PrivateRoute from './components/privateRoute';
 import Login from './components/loginRegister/login';
 import ReviewForm from './components/reviewForm';
-import BookUpdateForm from './components/bookUpdateForm';
 import { tokenExist, logOut } from './actions';
 
 class App extends Component {
