@@ -10,7 +10,6 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
 import UpdateButton from './updateButton';
-import { Link } from 'react-router-dom';
 
 class BookPage extends React.Component {
 	constructor(props) {
